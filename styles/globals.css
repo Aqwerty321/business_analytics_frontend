@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#__next {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, 'Source Sans Pro', Roboto, ui-sans-serif, system-ui;
+  background: #0b1220;
+  color: #e6eef8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-bg {
+  position: fixed;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  filter: blur(10px) saturate(80%);
+  transform: scale(1.08);
+  z-index: -2;
+}
+
+.app-overlay {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 12%, rgba(31, 143, 255, 0.2), transparent 32%),
+    radial-gradient(circle at 80% 88%, rgba(20, 184, 166, 0.18), transparent 32%),
+    linear-gradient(180deg, rgba(2, 6, 23, 0.66) 0%, rgba(2, 6, 23, 0.9) 100%);
+  z-index: -1;
+}
+
+.glass-panel {
+  background: rgba(17, 24, 39, 0.68);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 20px 45px rgba(2, 8, 23, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+.markdown-body pre {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.76);
+}
+
+.markdown-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.streaming-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #1f8fff;
+  display: inline-block;
+  animation: pulseSoft 1.2s ease-in-out infinite;
+}
+
+.streaming-dots span:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.streaming-dots span:nth-child(3) {
+  animation-delay: 0.32s;
+}

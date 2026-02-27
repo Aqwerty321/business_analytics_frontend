@@ -1,0 +1,140 @@
+{
+  "executive_summary": {
+    "thesis": "The company should prioritize enterprise expansion while tightening activation and retention loops.",
+    "confidence": 0.82
+  },
+  "observed_facts": [
+    {
+      "text": "Revenue rose 18% year over year in the latest quarter.",
+      "timestamp": "2026-02-10",
+      "sources": [
+        {
+          "id": "src_1",
+          "url": "https://example.com/earnings/q4",
+          "snippet": "Quarterly revenue from investor release.",
+          "retrieval_method": "search_fallback",
+          "credibility_score": 0.91,
+          "fetched_at": "2026-02-12T14:12:00Z"
+        }
+      ]
+    }
+  ],
+  "inferred_insights": [
+    {
+      "text": "Retention-led expansion can improve net revenue retention beyond 115%.",
+      "confidence": 0.74,
+      "assumptions": ["No pricing compression", "Stable churn drivers"],
+      "sources": [
+        {
+          "id": "src_2",
+          "url": "https://example.com/internal/retention",
+          "snippet": "Cohort retention trend from internal exports.",
+          "retrieval_method": "http_fetch",
+          "credibility_score": 0.84,
+          "fetched_at": "2026-02-12T14:14:00Z"
+        }
+      ]
+    }
+  ],
+  "assumptions": [
+    "Marketing spend remains within planned range.",
+    "Product roadmap timing is unchanged."
+  ],
+  "market_positioning": {
+    "segment": "Mid-market to enterprise SaaS",
+    "positioning_statement": "Reliable analytics platform with fast deployment and governance controls.",
+    "primary_buyer": "VP Revenue Operations"
+  },
+  "competitive_comparison_table": [
+    {
+      "name": "AlphaMetrics",
+      "price": "$99/seat",
+      "segment": "Mid-market",
+      "differentiation": "Workflow-first onboarding",
+      "sources": [
+        {
+          "id": "src_3",
+          "url": "https://example.com/alphametrics/pricing"
+        }
+      ]
+    }
+  ],
+  "swot_analysis": {
+    "strengths": ["Strong retention", "Fast implementation"],
+    "weaknesses": ["Limited partner channel"],
+    "opportunities": ["Enterprise upsell", "International expansion"],
+    "threats": ["Price competition", "Longer procurement cycles"]
+  },
+  "financial_analysis_if_public": {
+    "latest_quarter": {
+      "quarter": "Q4 2025",
+      "revenue": 124500000,
+      "ebitda_margin": 0.23,
+      "net_income": 15800000,
+      "market_cap": 1520000000,
+      "eps": 1.21,
+      "source": "https://example.com/earnings/q4"
+    }
+  },
+  "internal_data_analysis_if_provided": {
+    "raw_metrics": {
+      "active_customers": 842,
+      "avg_contract_value": 48200
+    },
+    "computed_metrics": {
+      "revenue_timeseries": [
+        { "period": "2025-09", "value": 98200000 },
+        { "period": "2025-10", "value": 105400000 },
+        { "period": "2025-11", "value": 113600000 },
+        { "period": "2025-12", "value": 124500000 }
+      ],
+      "segment_breakdown": [
+        { "segment": "SMB", "value": 22500000 },
+        { "segment": "Mid-market", "value": 51600000 },
+        { "segment": "Enterprise", "value": 50400000 }
+      ],
+      "mom_growth": 0.095,
+      "cagr": 0.28,
+      "volatility": 0.13
+    }
+  },
+  "risk_assessment": {
+    "top_risks": ["Macro budget pressure", "Competitive discounting"],
+    "mitigations": ["Value-based packaging", "Channel diversification"]
+  },
+  "30_60_90_day_growth_plan": {
+    "day_30": "Launch strict onboarding milestones for enterprise trials.",
+    "day_60": "Deploy retention playbooks by at-risk segment.",
+    "day_90": "Scale partner-assisted expansion in top two regions."
+  },
+  "confidence_scores": {
+    "section_scores": {
+      "executive_summary": 0.82,
+      "market_positioning": 0.76,
+      "financial_analysis": 0.84
+    }
+  },
+  "sources": [
+    {
+      "id": "src_1",
+      "url": "https://example.com/earnings/q4",
+      "snippet": "Quarterly earnings release.",
+      "retrieval_method": "search_fallback",
+      "credibility_score": 0.91,
+      "fetched_at": "2026-02-12T14:12:00Z"
+    },
+    {
+      "id": "src_2",
+      "url": "https://example.com/internal/retention",
+      "snippet": "Internal retention dataset extract.",
+      "retrieval_method": "http_fetch",
+      "credibility_score": 0.84,
+      "fetched_at": "2026-02-12T14:14:00Z"
+    }
+  ],
+  "meta": {
+    "mode": "investor",
+    "generated_at": "2026-02-12T14:16:00Z",
+    "processing_time_seconds": 12.4
+  }
+}

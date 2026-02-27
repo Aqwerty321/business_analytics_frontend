@@ -1,0 +1,86 @@
+{
+  "executive_summary": {
+    "thesis": "Improving enterprise activation and reducing onboarding friction can lift net revenue retention above 115%.",
+    "confidence": 0.8
+  },
+  "observed_facts": [
+    {
+      "text": "Activation from trial to paid enterprise improved from 12% to 16% after workflow templates.",
+      "timestamp": "2026-01-12",
+      "sources": [
+        {
+          "url": "https://example.com/saas/activation",
+          "snippet": "Internal CRM funnel export.",
+          "retrieval_method": "internal_export",
+          "credibility_score": 0.88
+        }
+      ]
+    }
+  ],
+  "inferred_insights": [
+    {
+      "text": "A guided onboarding path for enterprise admins can reduce time-to-value by roughly 20%.",
+      "confidence": 0.71,
+      "assumptions": ["No major product changes", "Support staffing remains stable"],
+      "sources": [
+        {
+          "url": "https://example.com/saas/support",
+          "snippet": "Support ticket resolution trend.",
+          "retrieval_method": "support_data",
+          "credibility_score": 0.76
+        }
+      ]
+    }
+  ],
+  "competitive_comparison_table": [
+    {
+      "name": "NovaStack",
+      "price": "$89/seat",
+      "segment": "Mid-market",
+      "differentiation": "Fast deployment",
+      "sources": [{ "url": "https://example.com/novastack" }]
+    },
+    {
+      "name": "Borealis AI",
+      "price": "$129/seat",
+      "segment": "Enterprise",
+      "differentiation": "Advanced reporting",
+      "sources": [{ "url": "https://example.com/borealis" }]
+    }
+  ],
+  "swot_analysis": {
+    "strengths": ["High product stickiness", "Strong support NPS"],
+    "weaknesses": ["Slow enterprise onboarding"],
+    "opportunities": ["Channel partnerships", "Usage-based upsell"],
+    "threats": ["Aggressive discounting by incumbents"]
+  },
+  "internal_data_analysis_if_provided": {
+    "computed_metrics": {
+      "revenue_timeseries": [
+        { "period": "2025-08", "value": 120000 },
+        { "period": "2025-09", "value": 127500 },
+        { "period": "2025-10", "value": 135000 },
+        { "period": "2025-11", "value": 142500 },
+        { "period": "2025-12", "value": 151000 }
+      ],
+      "segment_breakdown": [
+        { "segment": "SMB", "value": 52000 },
+        { "segment": "Mid-market", "value": 61000 },
+        { "segment": "Enterprise", "value": 38000 }
+      ]
+    }
+  },
+  "30_60_90_day_growth_plan": [
+    "30 days: Ship enterprise onboarding checklist and in-app setup wizard.",
+    "60 days: Launch partner-assisted implementation package.",
+    "90 days: Roll out usage-based expansion campaign for power accounts."
+  ],
+  "sources": [
+    {
+      "url": "https://example.com/saas/activation",
+      "snippet": "Trial funnel data",
+      "retrieval_method": "internal_export",
+      "credibility_score": 0.88
+    }
+  ]
+}

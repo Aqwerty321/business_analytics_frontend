@@ -1,0 +1,111 @@
+{
+  "executive_summary": {
+    "thesis": "The brand can grow by bundling premium cupcake packs and optimizing ad spend toward repeat buyers.",
+    "confidence": 0.72
+  },
+  "observed_facts": [
+    {
+      "text": "Average order value increased 14% after introducing party-size boxes.",
+      "timestamp": "2026-01-08",
+      "sources": [
+        {
+          "url": "https://example.com/d2c/orders",
+          "snippet": "Q4 order exports show larger basket sizes.",
+          "retrieval_method": "internal_export",
+          "credibility_score": 0.86
+        }
+      ]
+    },
+    {
+      "text": "Repeat purchase rate sits at 29% with strong weekend concentration.",
+      "timestamp": "2026-01-10",
+      "sources": [
+        {
+          "url": "https://example.com/d2c/repeat",
+          "snippet": "CRM cohort report for Jan 2026.",
+          "retrieval_method": "crm",
+          "credibility_score": 0.81
+        }
+      ]
+    }
+  ],
+  "inferred_insights": [
+    {
+      "text": "Weekend-targeted SMS promotions should improve repeat conversion by 3-5 points.",
+      "confidence": 0.66,
+      "assumptions": ["Existing margin holds", "No supply shocks"],
+      "sources": [
+        {
+          "url": "https://example.com/d2c/sms",
+          "snippet": "Previous campaigns improved returning customer volume.",
+          "retrieval_method": "historical_campaign",
+          "credibility_score": 0.74
+        }
+      ]
+    }
+  ],
+  "competitive_comparison_table": [
+    {
+      "name": "SweetCrate",
+      "price": "$34 box",
+      "segment": "Premium D2C",
+      "differentiation": "Subscription bundles",
+      "sources": [
+        {
+          "url": "https://example.com/competitors/sweetcrate"
+        }
+      ]
+    },
+    {
+      "name": "Frostly",
+      "price": "$27 box",
+      "segment": "Value",
+      "differentiation": "Low-cost variety",
+      "sources": [
+        {
+          "url": "https://example.com/competitors/frostly"
+        }
+      ]
+    }
+  ],
+  "swot_analysis": {
+    "strengths": ["Strong social proof", "Efficient local fulfillment"],
+    "weaknesses": ["Limited weekday demand"],
+    "opportunities": ["Corporate gifting", "Subscription plans"],
+    "threats": ["Ingredient inflation", "New local entrants"]
+  },
+  "internal_data_analysis_if_provided": {
+    "computed_metrics": {
+      "revenue_timeseries": [
+        { "period": "2025-09", "value": 42000 },
+        { "period": "2025-10", "value": 45700 },
+        { "period": "2025-11", "value": 48800 },
+        { "period": "2025-12", "value": 53600 }
+      ],
+      "segment_breakdown": [
+        { "segment": "Retail", "value": 25200 },
+        { "segment": "Subscription", "value": 17800 },
+        { "segment": "Wholesale", "value": 10600 }
+      ]
+    }
+  },
+  "30_60_90_day_growth_plan": [
+    "30 days: Launch weekend loyalty sequence and optimize PDP copy.",
+    "60 days: Pilot subscription bundle and A/B free-shipping threshold.",
+    "90 days: Expand B2B gifting channel with seasonal packs."
+  ],
+  "sources": [
+    {
+      "url": "https://example.com/d2c/orders",
+      "snippet": "Order analytics export",
+      "retrieval_method": "internal_export",
+      "credibility_score": 0.86
+    },
+    {
+      "url": "https://example.com/competitors/sweetcrate",
+      "snippet": "Public pricing page",
+      "retrieval_method": "web",
+      "credibility_score": 0.79
+    }
+  ]
+}
