@@ -14,6 +14,7 @@ import SourcesPanel from '../components/Dashboard/SourcesPanel';
 import { continueRun, startRun, streamToChunks } from '../lib/toolhouse';
 import { appendStrictJsonChunk, finalizeStrictJsonBuffer } from '../lib/strictJsonMode';
 import { STRICT_REPORT_TRIGGER, isStrictReportTrigger } from '../lib/reportMode';
+import { normalizeReportForUi } from '../lib/reportNormalizer';
 import { applyRevenueOverride } from '../utils/analytics';
 
 const STORAGE_KEYS = {
@@ -165,12 +166,13 @@ export default function HomePage() {
   }, [useDemoMode, useProxy]);
 
   const reportWithOverrides = useMemo(() => {
-    if (!currentReport) {
+    const normalizedReport = normalizeReportForUi(currentReport);
+    if (!normalizedReport) {
       return null;
     }
 
     const normalizedOverride = overrideRevenue === '' ? null : Number(overrideRevenue);
-    return applyRevenueOverride(currentReport, normalizedOverride);
+    return applyRevenueOverride(normalizedReport, normalizedOverride);
   }, [currentReport, overrideRevenue]);
 
   const latestQuarter = extractLatestQuarter(reportWithOverrides);
@@ -404,9 +406,11 @@ export default function HomePage() {
   };
 
   const growthPlanRaw = reportWithOverrides?.['30_60_90_day_growth_plan'] || [];
-  const growthPlan = Array.isArray(growthPlanRaw)
+  const growthPlan = (Array.isArray(growthPlanRaw)
     ? growthPlanRaw
-    : Object.values(growthPlanRaw || {});
+    : Object.values(growthPlanRaw || {}))
+    .map((step) => (Array.isArray(step) ? step.join(' ') : step))
+    .filter((step) => Boolean(String(step || '').trim()));
   const revenueTimeseries =
     reportWithOverrides?.internal_data_analysis_if_provided?.computed_metrics?.revenue_timeseries || [];
   const segmentBreakdown =
