@@ -392,6 +392,12 @@ export default function HomePage() {
     window.localStorage.removeItem(STORAGE_KEYS.currentRunId);
   };
 
+  const refreshFrontend = () => {
+    if (typeof window !== 'undefined') {
+      window.location.reload();
+    }
+  };
+
   const exportJson = () => {
     if (!reportWithOverrides) {
       return;
@@ -433,13 +439,24 @@ export default function HomePage() {
         <aside className="glass-panel h-fit rounded-2xl p-4">
           <div className="mb-4 flex items-center justify-between">
             <h1 className="text-lg font-bold text-slate-100">Business Agent</h1>
-            <button
-              type="button"
-              onClick={startFreshSession}
-              className="rounded-md border border-slate-600 px-2 py-1 text-xs text-slate-300 transition hover:border-accent"
-            >
-              New
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={refreshFrontend}
+                className="rounded-md border border-slate-600 px-2 py-1 text-xs text-slate-300 transition hover:border-accent"
+                aria-label="Refresh frontend"
+                title="Refresh frontend"
+              >
+                Refresh
+              </button>
+              <button
+                type="button"
+                onClick={startFreshSession}
+                className="rounded-md border border-slate-600 px-2 py-1 text-xs text-slate-300 transition hover:border-accent"
+              >
+                New
+              </button>
+            </div>
           </div>
 
           <div className="space-y-2">
