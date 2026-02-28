@@ -158,7 +158,8 @@ export default function HomePage() {
       );
     }
 
-    if (useProxy) {
+    // Prefer proxy in production deployments for reliability and key-hiding.
+    if (useProxy || process.env.NODE_ENV === 'production') {
       return '/api/proxy-toolhouse';
     }
 

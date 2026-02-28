@@ -81,8 +81,20 @@ This includes `tests/jsonMode.test.js`, which simulates strict-mode chunked stre
 
 1. Push this repo to GitHub.
 2. Import project in Vercel.
-3. Set env var `TOOLHOUSE_AGENT_URL` in Vercel dashboard.
-4. Deploy.
+3. In Vercel project settings, set env var `TOOLHOUSE_AGENT_URL=https://agents.toolhouse.ai/4e95d8c9-714f-4e6b-a26f-5a445800f04b`.
+4. Optionally set `NEXT_PUBLIC_UNSPLASH_IMAGE` for the background image.
+5. Deploy (build command is `npm run build`).
+
+### Deployment checklist (recommended)
+
+1. Confirm Vercel uses Node `20+` (project now declares `>=20.9.0`).
+2. Keep `TOOLHOUSE_AGENT_URL` configured in all deployed environments (Production/Preview as needed).
+3. Do not set `NEXT_PUBLIC_TOOLHOUSE_AGENT_URL` in production unless you explicitly want direct client calls.
+4. After deploy, validate:
+   - Chat request streams.
+   - `X-Toolhouse-Run-ID` is captured.
+   - Strict report mode parses JSON and opens dashboard.
+5. If streaming fails in browser, keep the app in proxy mode (production defaults to proxy now).
 
 ## Security notes
 
